@@ -14,4 +14,12 @@ class CommentsController < ApplicationController
       end
     end
   end
+
+  def create
+    respond_to do |format|
+      format.js do
+        render json: [params]
+      end
+    end
+  end
 end
